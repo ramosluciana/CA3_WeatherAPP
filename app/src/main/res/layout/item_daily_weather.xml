@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/day0Row"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x7"
+        android:clickable="true"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/day0TextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="@dimen/small_margin_size"
+            android:text="Wednesday"
+            android:textAlignment="center"
+            android:textColor="@color/metNavy"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/day0IconImageView"
+            android:layout_width="0dp"
+            android:src="@drawable/y12d"
+            android:layout_height="@dimen/x5"
+            android:layout_gravity="center"
+            android:layout_weight="0.15" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.12"
+            android:padding="2dp"
+            android:src="@drawable/y01d">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/day0TemperatureImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x4"
+                android:layout_gravity="center"
+                app:layout_constraintDimensionRatio="1:1" />
+
+            <TextView
+                android:id="@+id/day0TemperatureTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="8"
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:src="@drawable/y01d">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/day0WindImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/wind_arrow"
+                app:layout_constraintDimensionRatio="1:1" />
+
+            <TextView
+                android:id="@+id/day0WindTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#888888" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/day0WarningImageView"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/warninggreen" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.14">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/small_margin_size"
+                app:srcCompat="@drawable/chevron_right_grey" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/tiny_margin_size"
+        android:layout_marginBottom="@dimen/tiny_margin_size"
+        android:background="#cccccc">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#888888" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/metNavy">
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="@dimen/small_margin_size"
+                    android:text="EDIT WARNING NOTIFICATION"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/medium_text_size" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="9">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/tiny_margin_size"
+                    android:layout_weight="5"
+                    android:text="Area"
+                    android:textColor="@color/metNavy"
+                    android:textSize="@dimen/large_text_size" />
+
+                <Spinner
+                    android:id="@+id/areaSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/metNavy" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="9">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/tiny_margin_size"
+                    android:layout_weight="4"
+                    android:text="Level"
+                    android:textColor="@color/metNavy"
+                    android:textSize="@dimen/large_text_size" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/warningImageView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/tiny_margin_size" />
+
+                <Spinner
+                    android:id="@+id/levelSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/metNavy" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="9">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/tiny_margin_size"
+                    android:layout_weight="5"
+                    android:text="Type"
+                    android:textColor="@color/metNavy"
+                    android:textSize="@dimen/large_text_size" />
+
+                <Spinner
+                    android:id="@+id/typeSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="40dp"
+                android:background="@color/metNavy" />
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/medium_margin_size"
+                android:layout_marginRight="@dimen/medium_margin_size"
+                android:layout_marginBottom="@dimen/medium_margin_size"
+                android:background="@color/metNavy"
+                android:padding="@dimen/xlarge_margin_size"
+                android:text="UPDATE"
+                android:onClick="updateWarning"
+                android:textColor="#ffffff" />
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/medium_margin_size"
+                android:layout_marginRight="@dimen/medium_margin_size"
+                android:layout_marginBottom="@dimen/medium_margin_size"
+                android:background="@color/warningRed"
+                android:padding="@dimen/xlarge_margin_size"
+                android:text="DELETE"
+                android:onClick="deleteItem"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/medium_margin_size"
+                android:layout_marginRight="@dimen/medium_margin_size"
+                android:layout_marginBottom="@dimen/medium_margin_size"
+                android:background="@color/metNavy"
+                android:padding="@dimen/xlarge_margin_size"
+                android:text="CANCEL"
+                android:onClick="cancel"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

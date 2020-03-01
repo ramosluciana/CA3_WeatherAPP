@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AddWarningActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/metNavy">
+
+                        <TextView
+                            android:id="@+id/titleTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="@dimen/small_margin_size"
+                            android:text="ADD WARNING SUBSCRIPTION"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/medium_text_size" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="9">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/tiny_margin_size"
+                            android:layout_weight="5"
+                            android:text="Area"
+                            android:textColor="@color/metNavy"
+                            android:textSize="@dimen/large_text_size" />
+
+                        <Spinner
+                            android:id="@+id/areaSpinner"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="-"
+                            android:textColor="@color/metNavy" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/metNavy" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="9">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/tiny_margin_size"
+                            android:layout_weight="5"
+                            android:text="Level"
+                            android:textColor="@color/metNavy"
+                            android:textSize="@dimen/large_text_size" />
+
+
+
+                        <Spinner
+                            android:id="@+id/levelSpinner"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/metNavy" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="9">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/tiny_margin_size"
+                            android:layout_weight="5"
+                            android:text="Type"
+                            android:textColor="@color/metNavy"
+                            android:textSize="@dimen/large_text_size" />
+
+                        <Spinner
+                            android:id="@+id/typeSpinner"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="40dp"
+                        android:background="@color/metNavy" />
+
+                    <Button
+                        android:id="@+id/updateButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/medium_margin_size"
+                        android:layout_marginRight="@dimen/medium_margin_size"
+                        android:layout_marginBottom="@dimen/medium_margin_size"
+                        android:background="@color/metNavy"
+                        android:padding="@dimen/xlarge_margin_size"
+                        android:text="ADD"
+                        android:onClick="addWarning"
+                        android:textColor="#ffffff" />
+
+                    <Button
+                        android:id="@+id/cancelButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/medium_margin_size"
+                        android:layout_marginRight="@dimen/medium_margin_size"
+                        android:layout_marginBottom="@dimen/medium_margin_size"
+                        android:background="@color/metNavy"
+                        android:padding="@dimen/xlarge_margin_size"
+                        android:text="CANCEL"
+                        android:onClick="cancel"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+            </ScrollView>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/x18"
+                android:layout_height="@dimen/x18"
+                android:layout_gravity="center"
+                />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
